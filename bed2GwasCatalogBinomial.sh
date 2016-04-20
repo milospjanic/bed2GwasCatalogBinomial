@@ -15,7 +15,7 @@ echo "
 for var in \"\${@:1:\$#-1}\"
 do
   echo Received: \$var
-grep \"\$var\" GwasCatalog.bed > \"\$var\".gwascatalog.bed 
+grep -i  \"\$var\" GwasCatalog.bed > \"\$var\".gwascatalog.bed 
 echo Done: \$var
 done
 
@@ -46,7 +46,7 @@ echo "Gwas Catalog number of SNP-phenotype associations per category AFTER REMOV
 for var in \"\${@:1:\$#-1}\"
 do
   echo Phenotype: \$var
-wc -l \"\$var\".gwascatalog.bed.cut.sort.uniq  
+wc -l \"\$var\".gwascatalog.bed.cut.sort.uniq
 
 done
 
@@ -57,6 +57,7 @@ do
 sed -i 's/^23/X/g' \"\$var\".gwascatalog.bed.cut.sort.uniq
 sed -i 's/^24/Y/g' \"\$var\".gwascatalog.bed.cut.sort.uniq
 sed  's/^/chr/g' \"\$var\".gwascatalog.bed.cut.sort.uniq >  \"\$var\".gwascatalog.bed.cut.sort.uniq.chrXY
+rm \"\$var\".gwascatalog.bed.cut.sort.uniq
 done
 
 " > main.sh
@@ -67,7 +68,7 @@ chmod 775 main.sh
 
 #removing files
 rm gwascatalog.txt
-#rm main.sh
+rm main.sh
 
 for last; do true; done
 echo $last
@@ -101,6 +102,7 @@ echo Human Genome size version hg19: $hg19
 #bedtools merge on input bed
 sort -k1,1V -k2,2n $last > tmp
 bedtools merge -n -i tmp > $last
+rm tmp
  
 #calculate coverage
 cov=$(cat $last | awk '{ sum+=($3-$2)} END {print sum}')
@@ -108,7 +110,7 @@ echo Coverage of BED file $cov
 fra=$(cat $last | awk '{ sum+=($3-$2)} END {print sum/"'"$hg19"'"}')
 echo Fraction of hg19 $fra
 
-#create R script
+#create and run R script
 touch script.R
 echo "#!/usr/bin/Rscript" > script.R
 
@@ -120,3 +122,4 @@ done
 
 chmod 775 script.R
 ./script.R
+rm script.R
