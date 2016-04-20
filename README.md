@@ -1,6 +1,6 @@
 # bed2GwasCatalogBinomial
 
-This script will connect to GWAS Catalog and download the entire data set, create bed file, and parse and uniq according to the N-1 input arguments. Last argument provided to the bash script should be a bed file that will be used to intersect parsed bed files from the GWAS Catalog. Number of overlaps is reported and initial number of entries in parsed files.  Finally, it will create an R script that will be executed to calculate binomial p-values for each overlap. Intermediary files will be removed, except: GwasCatalog.bed (entire catalog in a bed file), *
+This script will connect to GWAS Catalog and download the entire data set, create bed file, and parse and uniq according to the N-1 input arguments. Last argument provided to the bash script should be a bed file that will be used to intersect parsed bed files from the GWAS Catalog. Number of overlaps is reported and initial number of entries in parsed files.  Finally, it will create an R script that will be executed to calculate binomial p-values for each overlap. Intermediary files will be removed, except: GwasCatalog.bed (entire catalog in a bed file), *gwascatalog.bed (parsed original files from GWAS Catalog), *gwascatalog.bed.cut.sort.uniq.chrXY (parsed and uniqed files from GWAS Catalog), *gwascatalog.bed.cut.sort.uniq.overlap (overlap with parsed files), GwasCatalog2Bed.sh (sciprt to download GWAS Catalog and convert to bed).
 
 #Usage
 <pre>
@@ -10,6 +10,10 @@ chmod 775 ./bed2GwasCatalogBinomial.sh
 
 #Dependencies 
 Rscript, bedtools (needs to be in $PATH)
+
+#Output
+<pre>
+./bed2GwasCatalogBinomial "Coronary artery" "Coronary heart" "Bipolar disorder" "Feminism" L2_TCCTGAGC_L002_peaks.bed 
 
 --2016-04-20 14:41:34--  http://www.genome.gov/admin/gwascatalog.txt
 Resolving www.genome.gov (www.genome.gov)... 156.40.242.24
@@ -103,4 +107,4 @@ Fraction of hg19 0.0291285
 [1] 0.04603295
 [1] "Feminism"
 [1] 0.7013601
-<\pre>
+</pre>
