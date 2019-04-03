@@ -7,7 +7,7 @@ This script will connect to GWAS Catalog and download the entire data set, creat
 #Usage
 <pre>
 chmod 775 ./bed2GwasCatalogBinomial.sh
-./bed2GwasCatalogBinomial "Coronary artery" "Coronary heart" "Bipolar disorder" "Feminism" L2_TCCTGAGC_L002_peaks.bed 
+./bed2GwasCatalogBinomial "Coronary_artery" "Coronary_heart" "Bipolar_disorder" "Feminism" L2_TCCTGAGC_L002_peaks.bed 
 </pre>
 
 #Dependencies 
