@@ -15,7 +15,7 @@ Rscript, bedtools (needs to be in $PATH)
 
 #Output
 <pre>
-./bed2GwasCatalogBinomial "Coronary artery" "Coronary heart" "Bipolar disorder" "Feminism" L2_TCCTGAGC_L002_peaks.bed 
+./bed2GwasCatalogBinomial "Coronary_artery" "Coronary_heart" "Bipolar disorder" "Feminism" L2_TCCTGAGC_L002_peaks.bed 
 
 --2016-04-20 14:41:34--  http://www.genome.gov/admin/gwascatalog.txt
 Resolving www.genome.gov (www.genome.gov)... 156.40.242.24
@@ -32,58 +32,58 @@ Saving to: `gwascatalog.txt'
 
 2016-04-20 14:41:42 (1.42 MB/s) - `gwascatalog.txt' saved [10407265/10407265]
 
-Received: Coronary artery
-Done: Coronary artery
-Received: Coronary heart
-Done: Coronary heart
-Received: Bipolar disorder
-Done: Bipolar disorder
+Received: Coronary_artery
+Done: Coronary_artery
+Received: Coronary_heart
+Done: Coronary_heart
+Received: Bipolar_disorder
+Done: Bipolar_disorder
 Received: Feminism
 Done: Feminism
 Gwas Catalog number of SNP-phenotype associations:
 18899 GwasCatalog.bed
 Gwas Catalog number of SNP-phenotype associations per category:
-Phenotype: Coronary artery
-110 Coronary artery.gwascatalog.bed
-Phenotype: Coronary heart
-143 Coronary heart.gwascatalog.bed
-Phenotype: Bipolar disorder
-444 Bipolar disorder.gwascatalog.bed
+Phenotype: Coronary_artery
+110 Coronary_artery.gwascatalog.bed
+Phenotype: Coronary_heart
+143 Coronary_heart.gwascatalog.bed
+Phenotype: Bipolar_disorder
+444 Bipolar_disorder.gwascatalog.bed
 Phenotype: Feminism
 12 Feminism.gwascatalog.bed
 Gwas Catalog number of SNP-phenotype associations per category AFTER REMOVING DUPLICATES:
-Phenotype: Coronary artery
-89 Coronary artery.gwascatalog.bed.cut.sort.uniq
-Phenotype: Coronary heart
-130 Coronary heart.gwascatalog.bed.cut.sort.uniq
-Phenotype: Bipolar disorder
-411 Bipolar disorder.gwascatalog.bed.cut.sort.uniq
+Phenotype: Coronary_artery
+89 Coronary_artery.gwascatalog.bed.cut.sort.uniq
+Phenotype: Coronary_heart
+130 Coronary_heart.gwascatalog.bed.cut.sort.uniq
+Phenotype: Bipolar_disorder
+411 Bipolar_disorder.gwascatalog.bed.cut.sort.uniq
 Phenotype: Feminism
 12 Feminism.gwascatalog.bed.cut.sort.uniq
-Converting Phenotype: Coronary artery
-Converting Phenotype: Coronary heart
-Converting Phenotype: Bipolar disorder
+Converting Phenotype: Coronary_artery
+Converting Phenotype: Coronary_heart
+Converting Phenotype: Bipolar_disorder
 Converting Phenotype: Feminism
 L2_TCCTGAGC_L002_peaks.bed
 Input phenotypes:
-Coronary artery Coronary heart Bipolar disorder Feminism
-Overlapping Phenotype SNPs with input bed: Coronary artery
-Overlapping Phenotype SNPs with input bed: Coronary heart
-Overlapping Phenotype SNPs with input bed: Bipolar disorder
+Coronary_artery Coronary_heart Bipolar_disorder Feminism
+Overlapping Phenotype SNPs with input bed: Coronary_artery
+Overlapping Phenotype SNPs with input bed: Coronary_heart
+Overlapping Phenotype SNPs with input bed: Bipolar_disorder
 Overlapping Phenotype SNPs with input bed: Feminism
-Number of Overlapping Phenotype SNPs with input bed: Coronary artery
-4 Coronary artery.gwascatalog.bed.cut.sort.uniq.overlap
-Number of Overlapping Phenotype SNPs with input bed: Coronary heart
-7 Coronary heart.gwascatalog.bed.cut.sort.uniq.overlap
-Number of Overlapping Phenotype SNPs with input bed: Bipolar disorder
+Number of Overlapping Phenotype SNPs with input bed: Coronary_artery
+4 Coronary_artery.gwascatalog.bed.cut.sort.uniq.overlap
+Number of Overlapping Phenotype SNPs with input bed: Coronary_heart
+7 Coronary_heart.gwascatalog.bed.cut.sort.uniq.overlap
+Number of Overlapping Phenotype SNPs with input bed: Bipolar_disorder
 8 Bipolar disorder.gwascatalog.bed.cut.sort.uniq.overlap
 Number of Overlapping Phenotype SNPs with input bed: Feminism
 0 Feminism.gwascatalog.bed.cut.sort.uniq.overlap
-Number of Overlapping Phenotype SNPs with input bed: Coronary artery
+Number of Overlapping Phenotype SNPs with input bed: Coronary_artery
 4
-Number of Overlapping Phenotype SNPs with input bed: Coronary heart
+Number of Overlapping Phenotype SNPs with input bed: Coronary_heart
 7
-Number of Overlapping Phenotype SNPs with input bed: Bipolar disorder
+Number of Overlapping Phenotype SNPs with input bed: Bipolar_disorder
 8
 Number of Overlapping Phenotype SNPs with input bed: Feminism
 0
@@ -101,11 +101,11 @@ Saving to: `hg19.chrom.sizes.18'
 Human Genome size version hg19: 3137161264
 Coverage of BED file 91380849
 Fraction of hg19 0.0291285
-[1] "Coronary artery"
+[1] "Coronary_artery"
 [1] 0.1810647
-[1] "Coronary heart"
+[1] "Coronary_heart"
 [1] 0.06673914
-[1] "Bipolar disorder"
+[1] "Bipolar_disorder"
 [1] 0.04603295
 [1] "Feminism"
 [1] 0.7013601
